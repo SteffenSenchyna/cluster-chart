@@ -1,0 +1,35 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: interface-cron
+spec:
+  schedule: "*/1 * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: network-cron
+            image: ssenchyna/interface-cron:latest
+            env:
+            - name: NETBOXTOKEN
+              valueFrom:
+                configMapKeyRef:
+                  name: interface-cron-config
+                  key: NETBOXTOKEN
+            - name: MONGOURL
+              valueFrom:
+                configMapKeyRef:
+                  name: interface-cron-config
+                  key: MONGOURL
+            - name: NETBOXURL
+              valueFrom:
+                configMapKeyRef:
+                  name: interface-cron-config
+                  key: NETBOXURL
+            - name: DISCORDURL
+              valueFrom:
+                configMapKeyRef:
+                  name: interface-cron-config
+                  key: DISCORDURL
+          restartPolicy: OnFailure

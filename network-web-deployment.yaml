@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: network-web-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: network-web
+  template:
+    metadata:
+      labels:
+        app: network-web
+    spec:
+      containers:
+      - name: network-web
+        image: ssenchyna/network-web:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 3000
+        envFrom:
+        - configMapRef:
+            name: default-config
