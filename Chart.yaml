@@ -1,0 +1,21 @@
+apiVersion: v2
+name: network-monitoring
+description: "Main deployment chart for network monitoring"
+version: 1.0.0
+type: application
+dependencies:
+- name: network-web
+  version: 1.0.0
+  repository: oci://registry-1.docker.io
+- name: network-api
+  version: 1.0.2
+  repository: oci://registry-1.docker.io
+- name: configmap
+  version: 1.0.0
+  repository: oci://registry-1.docker.io
+- name: syslog
+  version: 1.0.3
+  repository: oci://registry-1.docker.io
+- name: snmp
+  version: 1.0.3
+  repository: oci://registry-1.docker.io

@@ -1,6 +1,0 @@
-apiVersion: v2
-name: network-cron
-description: A chart for cron jobs
-version: 1.0.3
-keywords:
-- cron
