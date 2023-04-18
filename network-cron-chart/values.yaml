@@ -1,0 +1,86 @@
+jobs:
+# health cron
+- name: health
+  image:
+    repository: ssenchyna/network-cron
+    tag: latest
+    imagePullPolicy: IfNotPresent
+  # optional env vars
+  envFrom:
+  - configMapRef:
+      name: default-config
+  schedule: "*/10 * * * *"
+  command: ["/bin/sh"]
+  args:
+  - "-c"
+  - "python health.py"
+  resources:
+    limits:
+      cpu: 50m
+      memory: 256Mi
+    requests:
+      cpu: 50m
+      memory: 256Mi
+  serviceAccount:
+    name: "health"
+  failedJobsHistoryLimit: 1
+  successfulJobsHistoryLimit: 3
+  concurrencyPolicy: Allow
+  restartPolicy: Never
+
+- name: bandwidth
+  image:
+    repository: ssenchyna/network-cron
+    tag: latest
+    imagePullPolicy: IfNotPresent
+  # optional env vars
+  envFrom:
+  - configMapRef:
+      name: default-config
+  schedule: "*/30 * * * *"
+  command: ["/bin/sh"]
+  args:
+  - "-c"
+  - "python bandwidth.py"
+  resources:
+    limits:
+      cpu: 50m
+      memory: 256Mi
+    requests:
+      cpu: 50m
+      memory: 256Mi
+  serviceAccount:
+    name: "bandwidth"
+  failedJobsHistoryLimit: 1
+  successfulJobsHistoryLimit: 3
+  concurrencyPolicy: Allow
+  restartPolicy: Never
+
+- name: interface
+  image:
+    repository: ssenchyna/network-cron
+    tag: latest
+    imagePullPolicy: IfNotPresent
+  # optional env vars
+  envFrom:
+  - configMapRef:
+      name: default-config
+  schedule: "*/30 * * * *"
+  command: ["/bin/sh"]
+  args:
+  - "-c"
+  - "python interface.py"
+  resources:
+    limits:
+      cpu: 50m
+      memory: 256Mi
+    requests:
+      cpu: 50m
+      memory: 256Mi
+  serviceAccount:
+    name: "interface"
+  failedJobsHistoryLimit: 1
+  successfulJobsHistoryLimit: 3
+  concurrencyPolicy: Allow
+  restartPolicy: Never
+
