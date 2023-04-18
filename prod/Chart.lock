@@ -1,0 +1,18 @@
+dependencies:
+- name: network-web
+  repository: oci://registry-1.docker.io/ssenchyna
+  version: 1.0.1
+- name: network-api
+  repository: oci://registry-1.docker.io/ssenchyna
+  version: 1.0.2
+- name: configmap
+  repository: oci://registry-1.docker.io/ssenchyna
+  version: 1.0.0
+- name: syslog
+  repository: oci://registry-1.docker.io/ssenchyna
+  version: 1.0.3
+- name: snmp
+  repository: oci://registry-1.docker.io/ssenchyna
+  version: 1.0.3
+digest: sha256:91cd55bd97d5d4c919f707f157191c607f3db102a46647c30cd632a4f350c120
+generated: "2023-04-18T16:18:38.464391-06:00"
