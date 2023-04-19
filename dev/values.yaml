@@ -3,7 +3,7 @@ network-web:
     tag: "1.0.0-97798f8"
 network-api:
   image:
-    tag: "1.0.0-622624e"
+    tag: "1.0.0-4ef610b"
 configmap:
   image:
     tag: "1.0.0-feudwde"
