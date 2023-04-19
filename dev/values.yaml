@@ -12,4 +12,4 @@ syslog:
     tag: "1.0.0-65080fd"
 snmp:
   image:
-    tag: "1.0.0-flhgpog"
+    tag: "1.0.0-14b4553"
