@@ -1,4 +1,3 @@
-#test
 apiVersion: v2
 name: network-monitoring
 description: "Main deployment chart for network monitoring"
@@ -13,6 +12,10 @@ dependencies:
   version: 1.0.2
   repository: oci://registry-1.docker.io/ssenchyna
   condition: network-api.enabled
+- name: network-cron
+  version: 1.0.3
+  repository: oci://registry-1.docker.io/ssenchyna
+  condition: network-cron.enabled
 - name: configmap
   version: 1.0.0
   repository: oci://registry-1.docker.io/ssenchyna

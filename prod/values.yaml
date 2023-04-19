@@ -1,0 +1,15 @@
+network-web:
+  image:
+    tag: latest
+network-api:
+  image:
+    tag: latest
+configmap:
+  image:
+    tag: latest
+syslog:
+  image:
+    tag: latest
+snmp:
+  image:
+    tag: latest

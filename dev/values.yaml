@@ -1,0 +1,15 @@
+network-web:
+  image:
+    tag: "1.0.0-97798f8"
+network-api:
+  image:
+    tag: "1.0.0-622624e"
+configmap:
+  image:
+    tag: "1.0.0-feudwde"
+syslog:
+  image:
+    tag: "1.0.0-feuhfue"
+snmp:
+  image:
+    tag: "1.0.0-flhgpog"
