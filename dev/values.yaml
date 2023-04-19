@@ -9,7 +9,7 @@ configmap:
     tag: "1.0.0-feudwde"
 syslog:
   image:
-    tag: "1.0.0-b483006"
+    tag: "1.0.0-65080fd"
 snmp:
   image:
     tag: "1.0.0-flhgpog"
