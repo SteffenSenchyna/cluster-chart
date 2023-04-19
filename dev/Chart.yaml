@@ -5,7 +5,7 @@ version: 1.0.2
 type: application
 dependencies:
   - name: network-web
-    version: 1.0.3
+    version: 1.0.4
     repository: oci://registry-1.docker.io/ssenchyna
     condition: network-web.enabled
   - name: network-api

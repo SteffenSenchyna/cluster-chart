@@ -1,6 +1,6 @@
 network-web:
   image:
-    tag: "1.0.0-7b5f8a7e4"
+    tag: "1.0.0-a9e804ab9"
 network-api:
   image:
     tag: "1.0.0-364b646"
