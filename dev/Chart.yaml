@@ -1,7 +1,7 @@
 apiVersion: v2
 name: network-monitoring
 description: "Main deployment chart for network monitoring"
-version: 1.0.0
+version: 1.0.1
 type: application
 dependencies:
 - name: network-web
@@ -9,22 +9,22 @@ dependencies:
   repository: oci://registry-1.docker.io/ssenchyna
   condition: network-web.enabled
 - name: network-api
-  version: 1.0.2
+  version: 1.0.1
   repository: oci://registry-1.docker.io/ssenchyna
   condition: network-api.enabled
 - name: network-cron
-  version: 1.0.3
+  version: 1.0.1
   repository: oci://registry-1.docker.io/ssenchyna
   condition: network-cron.enabled
 - name: configmap
-  version: 1.0.0
+  version: 1.0.1
   repository: oci://registry-1.docker.io/ssenchyna
   condition: configmap.enabled
 - name: syslog
-  version: 1.0.3
+  version: 1.0.1
   repository: oci://registry-1.docker.io/ssenchyna
   condition: syslog.enabled
 - name: snmp
-  version: 1.0.3
+  version: 1.0.1
   repository: oci://registry-1.docker.io/ssenchyna
   condition: snmp.enabled
