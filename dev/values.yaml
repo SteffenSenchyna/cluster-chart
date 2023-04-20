@@ -12,7 +12,7 @@ syslog:
     tag: "1.0.0-d824548"
 snmp:
   image:
-    tag: "1.0.0-4a2a1db"
+    tag: "1.0.0-8c472ce"
 network-cron:
   image:
     tag: 1.0.0-8c0b3d9

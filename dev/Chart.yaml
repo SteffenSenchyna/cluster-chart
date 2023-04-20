@@ -25,7 +25,7 @@ dependencies:
     repository: oci://registry-1.docker.io/ssenchyna
     condition: syslog.enabled
   - name: snmp
-    version: 1.0.0
+    version: 1.0.1
     repository: oci://registry-1.docker.io/ssenchyna
     condition: snmp.enabled
   - name: openebs
