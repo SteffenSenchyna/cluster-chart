@@ -15,4 +15,4 @@ snmp:
     tag: "1.0.0-4a2a1db"
 network-cron:
   image:
-    tag: 1.0.0-6dfe63b
+    tag: 1.0.0-d570697
