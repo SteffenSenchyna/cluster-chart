@@ -1,5 +1,5 @@
 # Cluster Manifest Repository
-This repository contains the configuration files for a Kubernetes cluster that manages microservices that provide on-premise networking devices. It is updated automatically by a Jenkins pipeline. This repository is monitored by ArgoCD, which pulls the latest changes and applies them to the cluster. When a new version of the Docker image or Helm chart is available, ArgoCD automatically updates the deployment. Both the docker image and helm chart repositories are hosted on Docker Hub.
+This repository contains the configuration files for a Kubernetes cluster that manages microservices that interact with on-premise networking devices. It is updated automatically by a Jenkins pipeline. This repository is monitored by ArgoCD, which pulls the latest changes and applies them to the cluster. When a new version of the Docker image or Helm chart is available, ArgoCD automatically updates the deployment. Both the docker image and helm chart repositories are hosted on Docker Hub.
 
 ## Prerequisites
 * Jenkins Server
